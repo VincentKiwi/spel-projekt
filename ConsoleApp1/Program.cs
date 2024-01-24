@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿using System.Runtime.InteropServices;
+
+Console.Clear();
 
 // Variables
 Random dice = new Random();
@@ -111,13 +113,15 @@ while (mode == "vs")
     while (player1Action != "rock" && player1Action != "paper" && player1Action != "scissor")
     {
         player1Action = Console.ReadLine().ToLower();
+        Console.Clear();
     }
     Console.Write("Do you p2 pick rock, paper or scissor? ");
     while (player2Action != "rock" && player2Action != "paper" && player2Action != "scissor")
     {
         player2Action = Console.ReadLine().ToLower();
+        Console.Clear();
     }
-    Console.WriteLine($"You chose {player1Action}, The p2 chose {player2action}");
+    Console.WriteLine($"You chose {player1Action}, The p2 chose {player2Action}");
     Console.ReadLine();
 
     if (player1Action == "rock" && player2Action == "scissor")
