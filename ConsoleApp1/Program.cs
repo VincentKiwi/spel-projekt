@@ -25,10 +25,16 @@ while (mode != "e" && mode != "vs")
 }
 
 // Vs AI
+int playerhealth = 7;
+int aihealth = 7;
 while (mode == "e")
 {
     Console.Clear();
     Console.WriteLine("You chose vs AI");
+
+    // health
+    Console.WriteLine($"You have {playerhealth} Health");
+    Console.WriteLine($"The ai has {aihealth} Health");
 
     // Player action selection
     Console.Write("Do you pick rock, paper or scissor? ");
@@ -39,42 +45,101 @@ while (mode == "e")
     // AI action selection
     string AiAction = actions[dice.Next(3)];
 
+    Console.WriteLine($"You chose {player1Action}, The Ai chose {AiAction}");
+    Console.ReadLine();
+
     if (player1Action == "rock" && AiAction == "scissor")
     {
-        win = true;
+        aihealth--;
     }
     if (player1Action == "paper" && AiAction == "rock")
     {
-        win = true;
+        aihealth--;
     }
     if (player1Action == "scissor" && AiAction == "paper")
     {
-        win = true;
+        aihealth--;
     }
     if (player1Action == "scissor" && AiAction == "rock")
     {
-        win = false;
+        playerhealth--;
     }
     if (player1Action == "rock" && AiAction == "paper")
     {
-        win = false;
+        playerhealth--;
     }
     if (player1Action == "paper" && AiAction == "scissor")
     {
-        win = false;
+        playerhealth--;
     }
+    player1Action = "";
     if (player1Action == AiAction)
     {
-        
+        //add spam game
+    }
+    if (aihealth <= 0){
+        Console.WriteLine("You won");
+        Console.ReadLine();
+        mode = "";
+    }
+    if (playerhealth <= 0){
+        Console.WriteLine("You lost");
+        Console.ReadLine();
+        mode = "";
     }
 }
 
 // Vs Player
+int player1health = 7;
+int player2health = 7;
+
 while (mode == "vs")
 {
     Console.Clear();
     Console.WriteLine("You chose vs player what is players name");
+    string player2 = Console.ReadLine();
+   
+    Console.WriteLine($"p1 {player1health} Health");
+    Console.WriteLine($"p2 has {player2health} Health");
+    
+    Console.Write("Do you p1 pick rock, paper or scissor? ");
+    while (player1Action != "rock" && player1Action != "paper" && player1Action != "scissor"){
+        player1Action = Console.ReadLine().ToLower();
+    }
+    Console.Write("Do you p2 pick rock, paper or scissor? ");
+    while (player2Action != "rock" && player2Action != "paper" && player2Action != "scissor"){
+        player2Action = Console.ReadLine().ToLower();
+    }
+    Console.WriteLine($"You chose {player1Action}, The p2 chose {player2action}");
+    Console.ReadLine();
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
