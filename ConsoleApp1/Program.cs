@@ -37,7 +37,7 @@ while (mode == "e")
     Console.WriteLine("You chose vs AI");
 
     // health
-    Console.WriteLine($"You have {playerhealth} Health");
+    Console.WriteLine($"You have {player1} Health");
     Console.WriteLine($"The ai has {aihealth} Health");
 
     // Player action selection
@@ -106,8 +106,8 @@ while (mode == "vs")
     Console.WriteLine("You chose vs player what is player2s name");
     string player2 = Console.ReadLine();
 
-    Console.WriteLine($"p1 {player1health} Health");
-    Console.WriteLine($"p2 has {player2health} Health");
+    Console.WriteLine($"p1 {player1} Health");
+    Console.WriteLine($"p2 has {player2} Health");
 
     Console.Write("Do you p1 pick rock, paper or scissor? ");
     while (player1Action != "rock" && player1Action != "paper" && player1Action != "scissor")
