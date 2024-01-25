@@ -96,7 +96,7 @@ while (mode == "e")
     }
 }
 
-// Vs Player
+// Vs PlayerS
 int player1health = 7;
 int player2health = 7;
 
