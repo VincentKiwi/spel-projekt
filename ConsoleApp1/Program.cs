@@ -12,7 +12,7 @@ bool win;
 string[] actions = { "rock", "paper", "scissor" };
 
 // Introduction
-Console.WriteLine($"_-_-_-welcome to the game: rps spam -_-_-_");
+Console.WriteLine($"_-_-_-welcome to the game: rps spam (spam fake) -_-_-_");
 Console.WriteLine($"how the game works: the game is like rock papper scissors but in the result of a draw the game turns in to a spaming game");
 Console.WriteLine("the first one to take seven hp of the enemy or a player geats  KO (MEANING YOU WIN 3 ROUNDS IN A ROW)");
 Console.WriteLine("");
@@ -106,8 +106,8 @@ while (mode == "vs")
     Console.WriteLine("You chose vs player what is player2s name");
     string player2 = Console.ReadLine();
 
-    Console.WriteLine($"p1 {player1}{player1health} Health");
-    Console.WriteLine($"p2 {player2}{player2health} Health");
+    Console.WriteLine($"p1 {player1}-{player1health} Health");
+    Console.WriteLine($"p2 {player2}-{player2health} Health");
 
     Console.Write("Do you p1 pick rock, paper or scissor? ");
     while (player1Action != "rock" && player1Action != "paper" && player1Action != "scissor")
