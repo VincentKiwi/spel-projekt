@@ -89,7 +89,7 @@ while (mode == "e")
         mode = "";
     }
     if (playerhealth <= 0)
-    {
+    {a
         Console.WriteLine("You lost");
         Console.ReadLine();
         mode = "";
@@ -104,7 +104,7 @@ while (mode == "vs")
 {
     Console.Clear();
     Console.WriteLine("You chose vs player what is player2s name");
-    string player2 = Console.ReadLine();
+    string player2 = Console.ReadLine();s
 
     Console.WriteLine($"p1 {player1}-{player1health} Health");
     Console.WriteLine($"p2 {player2}-{player2health} Health");
