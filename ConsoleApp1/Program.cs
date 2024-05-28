@@ -27,6 +27,46 @@ while (mode != "e" && mode != "vs")
 {
     mode = Console.ReadLine();
 }
+// spam static void
+static void spam()
+{
+    int playeronenumber = 0;
+    int playertwonumber = 0;
+    Console.WriteLine("first to spam to 30 wins");
+    Console.WriteLine("{player1} spam the F key {player2} spam the J key");
+    Console.WriteLine("3");
+    Console.WriteLine("2");
+    Console.WriteLine("1");
+    Console.WriteLine("go");
+   
+    while (playeronenumber < 30 && playertwonumber < 30)
+    {
+        ConsoleKeyInfo info = Console.ReadKey(true);
+
+        if (info.KeyChar == 'f')
+        {
+            playeronenumber++;
+        }
+        if (info.KeyChar == 'j')
+        {
+            playertwonumber++;
+        }
+    }
+    if (playeronenumber == 30)
+    {
+        Console.WriteLine("player 1 won player 2 lose");
+    }
+    if (playertwonumber == 30)
+    {
+        Console.WriteLine("player 2 won player 1 lose");
+    }
+
+
+
+
+    if (Console.readkey(true) != "Console")
+}
+
 
 // Vs AI
 int playerhealth = 7;
@@ -89,7 +129,7 @@ while (mode == "e")
         mode = "";
     }
     if (playerhealth <= 0)
-    {a
+    {
         Console.WriteLine("You lost");
         Console.ReadLine();
         mode = "";
@@ -104,7 +144,7 @@ while (mode == "vs")
 {
     Console.Clear();
     Console.WriteLine("You chose vs player what is player2s name");
-    string player2 = Console.ReadLine();s
+    string player2 = Console.ReadLine(); s
 
     Console.WriteLine($"p1 {player1}-{player1health} Health");
     Console.WriteLine($"p2 {player2}-{player2health} Health");
@@ -134,8 +174,8 @@ while (mode == "vs")
     {
         player2health--;
     }
-   
-   
+
+
     if (player1Action == "scissor" && player2Action == "rock")
     {
         player1health--;
@@ -148,6 +188,14 @@ while (mode == "vs")
     {
         player1health--;
     }
+
+    // in case of draw spam
+    if (player1Action == player2Action)
+    {
+        spam
+    }
+
+
     player1Action = "";
     player2Action = "";
 
@@ -169,7 +217,6 @@ while (mode == "vs")
 Console.Clear();
 
 
-Console.ReadKey();
 
 
 
